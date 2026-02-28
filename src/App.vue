@@ -1,16 +1,16 @@
 <template>
   <div class="app-layout">
-    <Navbar />
+    <AppNavbar />
     <main class="main">
       <router-view />
     </main>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
-import Navbar from "@/components/Navbar.vue"
-import Footer from "@/components/Footer.vue"
+import AppNavbar from '@/components/AppNavbar.vue'
+import AppFooter from '@/components/AppFooter.vue'
 </script>
 
 <style scoped>
@@ -22,7 +22,6 @@ import Footer from "@/components/Footer.vue"
 
 .main {
   flex: 1;
-  padding: 24px;
 }
 </style>
 
