@@ -1,47 +1,37 @@
-<script lang="ts" setup></script>
-
 <template>
   <div class="app-layout">
-    <nav class="nav">
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
-    </nav>
-
+    <Navbar />
     <main class="main">
       <router-view />
     </main>
-
-    <footer class="footer">© 2026 My Vue App</footer>
+    <Footer />
   </div>
 </template>
 
+<script setup lang="ts">
+import Navbar from "@/components/Navbar.vue"
+import Footer from "@/components/Footer.vue"
+</script>
+
 <style scoped>
 .app-layout {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
-
-.nav {
-  padding: 1rem;
-  background: #333;
-}
-
-.nav a {
-  color: white;
-  margin-right: 1rem;
-  text-decoration: none;
 }
 
 .main {
   flex: 1;
-  padding: 2rem;
+  padding: 24px;
 }
+</style>
 
-.footer {
-  padding: 1rem;
-  background: #f4f4f4;
-  text-align: center;
+<style>
+:root {
+  --blue-dark: #0f1e2e;
+  --blue: #1f3a5f;
+  --gold: #b89b5e;
+  --white: #ffffff;
+  --gray: #dcdcdc;
 }
 </style>
