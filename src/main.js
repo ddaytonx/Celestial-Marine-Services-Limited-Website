@@ -1,11 +1,13 @@
-'use strict'
-Object.defineProperty(exports, '__esModule', { value: true })
-var vue_1 = require('vue')
-var App_vue_1 = require('./App.vue')
-var router_1 = require('./router')
-require('bootstrap/dist/css/bootstrap.min.css')
-require('bootstrap')
-require('bootstrap-icons/font/bootstrap-icons.css')
-var app = (0, vue_1.createApp)(App_vue_1.default)
-app.use(router_1.default)
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
+const app = createApp(App)
+
+app.use(router)
+
 app.mount('#app')
