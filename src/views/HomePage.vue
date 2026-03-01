@@ -111,12 +111,22 @@
     background:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url('/assets/hero.jpg') center / cover no-repeat;
+    background-attachment: fixed;
 }
 
 .featured-services {
     background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('/assets/sea-texture.jpg') center / cover no-repeat;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .hero-section,
+    .featured-services,
+    .cta-section {
+        background-attachment: scroll;
+    }
 }
 
 .cta-section {
@@ -124,6 +134,7 @@
     background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('/assets/hero.jpg') center / cover no-repeat;
+    background-attachment: fixed;
 }
 
 .section-title {

@@ -1,5 +1,6 @@
 <template>
     <footer class="footer">
+        <!-- MAIN FOOTER -->
         <div class="container footer-grid">
             <div class="footer-brand">
                 <router-link to="/">
@@ -28,8 +29,6 @@
                 <p>+1 234 567 890</p>
             </div>
         </div>
-
-        <div class="footer-bottom">© 2026 Maritime Services. All Rights Reserved.</div>
     </footer>
 </template>
 
@@ -45,7 +44,7 @@
 .footer-grid {
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 20px 40px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
@@ -71,14 +70,6 @@
 
 .footer-col a:hover {
     color: #ffffff;
-}
-
-.footer-bottom {
-    margin-top: 40px;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 13px;
-    background: #081521;
 }
 
 /* RESPONSIVE */

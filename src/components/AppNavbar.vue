@@ -1,21 +1,6 @@
 <template>
-    <!-- Top Info Bar -->
-    <div class="top-bar">
-        <div class="container d-flex justify-content-between">
-            <div class="top-left">
-                <span>📞 +1 234 567 890</span>
-                <span>✉ info@celestialmarineservices.com</span>
-            </div>
-            <div class="top-right">
-                <a href="#">f</a>
-                <a href="#">x</a>
-                <a href="#">in</a>
-            </div>
-        </div>
-    </div>
-
     <!-- Main Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <!-- Logo -->
             <router-link to="/" class="navbar-brand logo">
@@ -78,26 +63,6 @@
 
 <style scoped>
 /* =====================
-   TOP BAR
-===================== */
-.top-bar {
-    background: #081521;
-    color: var(--gray);
-    font-size: 13px;
-    padding: 6px 0;
-}
-
-.top-left span {
-    margin-right: 15px;
-}
-
-.top-right a {
-    color: var(--gray);
-    margin-left: 10px;
-    text-decoration: none;
-}
-
-/* =====================
    NAVBAR
 ===================== */
 .navbar {
@@ -105,8 +70,13 @@
     border-bottom: 1px solid #e5e5e5;
 }
 
+.logo {
+    padding: 0px;
+    margin: 0px;
+}
+
 .logo img {
-    height: 90px;
+    height: 60px;
 }
 
 .nav-link {
