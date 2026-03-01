@@ -28,13 +28,3 @@ import TopBar from '@/components/TopBar.vue'
     flex: 1;
 }
 </style>
-
-<style>
-:root {
-    --blue-dark: #0f1e2e;
-    --blue: #1f3a5f;
-    --gold: #b89b5e;
-    --white: #ffffff;
-    --gray: #dcdcdc;
-}
-</style>
