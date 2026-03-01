@@ -1,58 +1,31 @@
 <template>
-    <!-- Main Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
         <div class="container">
             <!-- Logo -->
-            <router-link to="/" class="navbar-brand logo">
-                <img src="/logo.png" alt="Maritime Logo" />
+            <router-link to="/" class="navbar-brand p-0">
+                <img src="/logo.png" alt="Maritime Logo" height="60" />
             </router-link>
 
             <!-- Mobile Toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Links -->
+            <!-- Navigation -->
             <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-                <ul class="navbar-nav align-items-lg-center">
-                    <li class="nav-item">
-                        <router-link to="/company" class="nav-link">Company</router-link>
-                    </li>
-
-                    <li class="nav-item">
-                        <router-link to="/services" class="nav-link">Services</router-link>
-                    </li>
-
-                    <li class="nav-item">
-                        <router-link to="/experience" class="nav-link">Experience</router-link>
-                    </li>
-
-                    <li class="nav-item">
-                        <router-link to="/vacancies" class="nav-link">Vacancies</router-link>
-                    </li>
-
-                    <!-- News Dropdown -->
+                <ul class="navbar-nav align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><router-link to="/about" class="nav-link">Company</router-link></li>
+                    <li class="nav-item"><router-link to="/services" class="nav-link">Services</router-link></li>
+                    <li class="nav-item"><router-link to="/experience" class="nav-link">Experience</router-link></li>
+                    <li class="nav-item"><router-link to="/vacancies" class="nav-link">Vacancies</router-link></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> News </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <router-link to="/news" class="dropdown-item"> All News </router-link>
-                            </li>
-                            <li>
-                                <router-link to="/press" class="dropdown-item"> Press Releases </router-link>
-                            </li>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> News </a>
+                        <ul class="dropdown-menu shadow border-0 rounded-0">
+                            <li><router-link to="/news" class="dropdown-item"> All News </router-link></li>
+                            <li><router-link to="/press" class="dropdown-item"> Press Releases </router-link></li>
                         </ul>
                     </li>
-
-                    <li class="nav-item">
-                        <router-link to="/contact" class="nav-link">Contact</router-link>
-                    </li>
-
-                    <!-- <li class="nav-item ms-lg-3">
-            <router-link to="/login" class="btn btn-gold">
-              Login
-            </router-link>
-          </li> -->
+                    <li class="nav-item"><router-link to="/contact" class="nav-link">Contact</router-link></li>
                 </ul>
             </div>
         </div>
@@ -60,75 +33,47 @@
 </template>
 
 <script setup></script>
-
 <style scoped>
 /* =====================
-   NAVBAR
+   NAV LINKS
 ===================== */
-.navbar {
-    background: var(--white);
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.logo {
-    padding: 0px;
-    margin: 0px;
-}
-
-.logo img {
-    height: 60px;
-}
-
 .nav-link {
-    color: var(--blue-dark);
     font-weight: 500;
-    margin: 0 6px;
+    color: var(--text-dark);
 }
 
 .nav-link:hover,
 .router-link-active {
-    color: var(--gold);
+    color: var(--color-secondary) !important;
 }
 
 /* =====================
-   DROPDOWN
+   DROPDOWN (HOVER DESKTOP)
 ===================== */
-.dropdown-menu {
-    border-radius: 0;
-    border: none;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
 }
 
+/* =====================
+   DROPDOWN ITEMS
+===================== */
 .dropdown-item {
-    font-size: 14px;
+    color: var(--text-dark);
 }
 
 .dropdown-item:hover {
-    background: #f2f4f6;
-    color: var(--gold);
+    background-color: var(--bg-light);
+    color: var(--color-secondary);
 }
 
 /* =====================
-   BUTTON
-===================== */
-.btn-gold {
-    background: var(--gold);
-    color: var(--white);
-    padding: 8px 18px;
-    border-radius: 2px;
-    text-decoration: none;
-}
-
-.btn-gold:hover {
-    background: #a88a4f;
-    color: var(--white);
-}
-
-/* =====================
-   MOBILE
+   MOBILE LOGO
 ===================== */
 @media (max-width: 991px) {
-    .logo img {
+    .navbar-brand img {
         height: 70px;
     }
 }

@@ -1,7 +1,65 @@
+* {
+    font-family: 'Google Sans Flex', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
 :root {
-    --blue-dark: #0f1e2e;
-    --blue: #1f3a5f;
-    --gold: #b89b5e;
-    --white: #ffffff;
-    --gray: #dcdcdc;
+    /* =====================
+     BASE BRAND COLORS
+  ===================== */
+    --app-blue-dark: #0f1e2e;
+    --app-blue: #1f3a5f;
+    --app-gold: #b89b5e;
+    --app-white: #ffffff;
+    --app-gray: #dcdcdc;
+
+    /* =====================
+     PRIMARY / SECONDARY
+  ===================== */
+    --color-primary: var(--app-blue);
+    --color-primary-dark: var(--app-blue-dark);
+    --color-primary-light: #2e4f7f;
+
+    --color-secondary: var(--app-gold);
+    --color-secondary-dark: #a1874f;
+    --color-secondary-light: #d1ba86;
+
+    /* =====================
+     TEXT COLORS
+  ===================== */
+    --text-dark: var(--app-blue-dark);
+    --text-muted: #6c757d;
+    --text-light: #f8f9fa;
+    --text-white: var(--app-white);
+    --text-gold: var(--app-gold);
+
+    /* =====================
+     BACKGROUNDS
+  ===================== */
+    --bg-body: var(--app-white);
+    --bg-light: #f5f7fa;
+    --bg-dark: var(--app-blue-dark);
+    --bg-primary: var(--color-primary);
+    --bg-secondary: var(--color-secondary);
+
+    /* =====================
+     BUTTONS
+  ===================== */
+    --btn-primary-bg: var(--color-primary);
+    --btn-primary-bg-hover: var(--color-primary-dark);
+    --btn-primary-text: var(--text-white);
+
+    --btn-secondary-bg: var(--color-secondary);
+    --btn-secondary-bg-hover: var(--color-secondary-dark);
+    --btn-secondary-text: var(--text-white);
+
+    --btn-outline-primary: var(--color-primary);
+    --btn-outline-secondary: var(--color-secondary);
+
+    /* =====================
+     BORDERS & SHADOWS
+  ===================== */
+    --border-color: var(--app-gray);
+    --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.12);
 }

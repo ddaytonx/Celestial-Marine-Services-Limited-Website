@@ -5,13 +5,9 @@
     <!-- LEGAL LINKS -->
     <div class="legal-bar">
         <ul>
-            <li>
-                <a href="#">Privacy Policy</a>
-            </li>
+            <li><a href="#">Privacy Policy</a></li>
             <span class="separator">|</span>
-            <li>
-                <a href="#">Terms & Conditions</a>
-            </li>
+            <li><a href="#">Terms & Conditions</a></li>
         </ul>
     </div>
 </template>
@@ -25,9 +21,9 @@ const year = new Date().getFullYear()
 /* COPYRIGHT BAR */
 .copyright-bar {
     position: sticky;
-    bottom: 0;
-    background: #081521;
-    color: #ccc;
+    bottom: -2px;
+    background: var(--bg-dark);
+    color: var(--text-white);
     text-align: center;
     padding: 10px;
     font-size: 13px;
@@ -36,7 +32,7 @@ const year = new Date().getFullYear()
 
 /* LEGAL BAR */
 .legal-bar {
-    background: #060f18;
+    background: var(--color-primary-dark);
     text-align: center;
     padding: 10px 0;
 }
@@ -51,16 +47,18 @@ const year = new Date().getFullYear()
 .separator {
     display: inline-block;
     margin: 0 6px;
+    color: var(--text-muted);
 }
 
 .legal-bar a {
-    color: #ffffff;
+    color: var(--text-light);
     font-size: 13px;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .legal-bar a:hover {
-    text-decoration: underline;
+    color: var(--text-gold);
 }
 
 /* RESPONSIVE */

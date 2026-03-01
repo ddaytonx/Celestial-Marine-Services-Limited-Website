@@ -13,7 +13,8 @@
             <div class="d-flex justify-content-center gap-3 mt-4">
                 <!-- <a href="#" class="btn btn-gold px-4">Button 1</a> -->
                 <!-- <a href="#" class="btn btn-secondary btn-outline-light px-4">Our Services</a> -->
-                <a href="#" class="btn btn-gold px-4">Our Services</a>
+                <router-link to="/about" class="btn btn-gold px-4">About Us</router-link>
+                <router-link to="/services" class="btn btn-gold px-4">Services</router-link>
             </div>
         </div>
     </section>
@@ -91,7 +92,7 @@
             </div>
 
             <div class="mt-4">
-                <a href="#" class="btn btn-gold px-4">View All Services</a>
+                <router-link to="/services" class="btn btn-gold px-4">View All Services</router-link>
             </div>
         </div>
     </section>
@@ -100,7 +101,7 @@
     <section class="cta-section text-center text-white d-flex align-items-center">
         <div class="container">
             <h2 class="mb-3">Partner With Excellence on the Water</h2>
-            <a href="#" class="btn btn-gold px-5">Contact Our Team</a>
+            <router-link to="/contact" class="btn btn-gold px-5">Contact Our Team</router-link>
         </div>
     </section>
 </template>
@@ -116,8 +117,7 @@
 
 .featured-services {
     background:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('/assets/sea-texture.jpg') center / cover no-repeat;
+        /* linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), */ url('/assets/sea-texture.jpg') center / cover no-repeat;
     background-attachment: fixed;
 }
 
