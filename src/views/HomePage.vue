@@ -1,4 +1,54 @@
-<script setup></script>
+<script setup>
+/* FEATURES */
+const features = [
+    {
+        icon: '⚙️',
+        title: 'Technical Expertise',
+        description: 'Extensive maritime engineering and technical consultancy services delivered by seasoned industry professionals.',
+        delay: 100,
+    },
+    {
+        icon: '🌍',
+        title: 'Global Project Execution',
+        description: 'Expert management of maritime operating processes with emphasis on safety, efficiency, and regulatory compliance.',
+        delay: 200,
+    },
+    {
+        icon: '🛠️',
+        title: 'Tailored Marine Solutions',
+        description: 'Customized solutions aligned with operational objectives, ensuring reliable and sustainable performance.',
+        delay: 300,
+    },
+]
+
+/* SERVICES */
+const services = [
+    {
+        icon: '🚢',
+        title: 'Marine Engineering',
+        description: 'Advanced engineering solutions tailored to marine operations.',
+        delay: 100,
+    },
+    {
+        icon: '⚓',
+        title: 'Project Management',
+        description: 'End-to-end project oversight ensuring timely delivery.',
+        delay: 200,
+    },
+    {
+        icon: '📋',
+        title: 'Technical Assessments',
+        description: 'Independent audits, inspections, and certifications.',
+        delay: 300,
+    },
+    {
+        icon: '🛡️',
+        title: 'Compliance & Advisory',
+        description: 'Regulatory guidance and risk mitigation strategies.',
+        delay: 400,
+    },
+]
+</script>
 
 <template>
     <!-- HERO -->
@@ -26,27 +76,11 @@
             <h2 class="section-title mb-5">What Sets Us Apart</h2>
 
             <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div v-for="(item, index) in features" :key="index" class="col-md-4" data-aos="fade-up" :data-aos-delay="item.delay">
                     <div class="card custom-card h-100 p-4">
-                        <div class="icon mb-3">⚙️</div>
-                        <h5>Technical Expertise</h5>
-                        <p class="text-muted">Extensive maritime engineering and technical consultancy services delivered by seasoned industry professionals.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card custom-card h-100 p-4">
-                        <div class="icon mb-3">🌍</div>
-                        <h5>Global Project Execution</h5>
-                        <p class="text-muted">Expert management of maritime operating processes with emphasis on safety, efficiency, and regulatory compliance.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card custom-card h-100 p-4">
-                        <div class="icon mb-3">🛠️</div>
-                        <h5>Tailored Marine Solutions</h5>
-                        <p class="text-muted">Customized solutions aligned with operational objectives, ensuring reliable and sustainable performance.</p>
+                        <div class="icon mb-3">{{ item.icon }}</div>
+                        <h5>{{ item.title }}</h5>
+                        <p class="text-muted">{{ item.description }}</p>
                     </div>
                 </div>
             </div>
@@ -59,35 +93,11 @@
             <h2 class="section-title-light mb-5">Featured Services</h2>
 
             <div class="row g-4">
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                <div v-for="(service, index) in services" :key="index" class="col-md-3" data-aos="zoom-in" :data-aos-delay="service.delay">
                     <div class="service-card p-4 h-100">
-                        <div class="icon mb-3">🚢</div>
-                        <h6>Marine Engineering</h6>
-                        <p>Advanced engineering solutions tailored to marine operations.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="service-card p-4 h-100">
-                        <div class="icon mb-3">⚓</div>
-                        <h6>Project Management</h6>
-                        <p>End-to-end project oversight ensuring timely delivery.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="service-card p-4 h-100">
-                        <div class="icon mb-3">📋</div>
-                        <h6>Technical Assessments</h6>
-                        <p>Independent audits, inspections, and certifications.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="service-card p-4 h-100">
-                        <div class="icon mb-3">🛡️</div>
-                        <h6>Compliance & Advisory</h6>
-                        <p>Regulatory guidance and risk mitigation strategies.</p>
+                        <div class="icon mb-3">{{ service.icon }}</div>
+                        <h6>{{ service.title }}</h6>
+                        <p>{{ service.description }}</p>
                     </div>
                 </div>
             </div>
@@ -113,7 +123,7 @@
     min-height: 90vh;
     background:
         linear-gradient(rgba(15, 30, 46, 0.75), rgba(15, 30, 46, 0.75)),
-        url('/assets/hero.jpg') center / cover no-repeat;
+        url('/assets/home-hero.jpg') center / cover no-repeat;
     background-attachment: fixed;
 }
 
@@ -137,22 +147,7 @@
 }
 
 /* SECTION TITLES */
-.section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    width: 60px;
-    height: 3px;
-    background: var(--app-gold);
-    display: block;
-    margin: 12px auto 0;
-}
-
+.section-title,
 .section-title-light {
     font-size: 2rem;
     font-weight: 700;
@@ -160,6 +155,7 @@
     display: inline-block;
 }
 
+.section-title::after,
 .section-title-light::after {
     content: '';
     width: 60px;
@@ -186,7 +182,7 @@
 .featured-services {
     background:
         linear-gradient(rgba(15, 30, 46, 0.85), rgba(15, 30, 46, 0.85)),
-        url('/assets/sea-texture.jpg') center / cover no-repeat;
+        url('/assets/home-sea-texture.jpg') center / cover no-repeat;
     background-attachment: fixed;
 }
 
@@ -207,7 +203,7 @@
     min-height: 45vh;
     background:
         linear-gradient(rgba(15, 30, 46, 0.85), rgba(15, 30, 46, 0.85)),
-        url('/assets/hero.jpg') center / cover no-repeat;
+        url('/assets/home-hero.jpg') center / cover no-repeat;
     background-attachment: fixed;
 }
 
