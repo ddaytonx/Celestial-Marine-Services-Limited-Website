@@ -7,6 +7,15 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './main.css'
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-in-out',
+})
+
 const app = createApp(App)
 
 app.use(router)

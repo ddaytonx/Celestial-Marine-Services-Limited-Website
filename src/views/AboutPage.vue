@@ -1,86 +1,64 @@
 <template>
     <div class="about-page">
         <!-- ================= HERO ================= -->
-        <section class="hero-section text-white text-center py-5">
-            <div class="container">
-                <h1 class="display-3 fw-bold mb-3">About Our Company</h1>
-                <p class="lead col-lg-8 mx-auto mb-4">Engineering powerful digital solutions across Web, Enterprise Systems, Game Development and Creative Design.</p>
-                <button class="btn btn-lg btn-secondary-custom px-4">Explore Our Services</button>
+        <section class="hero-section text-white text-center d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container position-relative hero-content">
+                <h1 class="display-3 fw-bold mb-3 animate-fade-up">Ship Building, Maintenance & Repair</h1>
+                <p class="lead col-lg-8 mx-auto mb-4 animate-fade-up delay-1">Delivering world-class ship construction, marine engineering, maintenance, and repair solutions with precision and reliability.</p>
+                <RouterLink to="/services" class="btn btn-lg btn-secondary-custom px-4 animate-fade-up delay-2">Explore Our Services</RouterLink>
             </div>
         </section>
 
         <!-- ================= STORY ================= -->
-        <section class="py-5 bg-light">
+        <section class="py-5 bg-light reveal-section">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
-                        <h2 class="fw-bold text-primary-custom mb-4">Our Story</h2>
-                        <p class="text-muted">Founded with a passion for innovation and engineering excellence, we started as a small development team delivering custom web applications.</p>
-                        <p class="text-muted">Today, we build scalable enterprise APIs, Unity 3D game systems, automation platforms and creative digital experiences used by businesses worldwide.</p>
-                        <p class="text-muted">Our philosophy is simple: build clean architecture, scalable systems, and beautiful user experiences.</p>
+                        <img src="/assets/about-us-our-story.png" class="img-fluid rounded-4 shadow-soft-custom hover-zoom" alt="Shipyard Operations" />
                     </div>
-
                     <div class="col-lg-6">
-                        <div class="info-card p-4 shadow-soft-custom rounded-4">
-                            <h4 class="fw-bold text-gold-custom mb-3">Our Mission</h4>
-                            <p class="text-muted mb-0">Deliver high-performance digital solutions that combine innovation, security, scalability, and design excellence.</p>
-                        </div>
+                        <h2 class="fw-bold text-primary-custom mb-4">Our Story</h2>
+                        <p class="text-muted">Founded with a commitment to maritime excellence and engineering precision.</p>
+                        <p class="text-muted">We specialize in shipbuilding, vessel retrofitting, dry docking, marine system upgrades, and structural repairs for commercial and industrial fleets.</p>
+                        <p class="text-muted">Our philosophy is simple: build durable vessels, ensure operational efficiency, and maintain the highest international safety standards.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ================= STATS ================= -->
-        <section class="py-5 text-center">
-            <div class="container">
+        <section class="py-5 text-center stats-section text-white">
+            <div class="overlay-dark"></div>
+            <div class="container position-relative">
                 <div class="row g-4">
-                    <div class="col-md-3">
-                        <h2 class="fw-bold text-primary-custom">150+</h2>
-                        <p class="text-muted">Projects Delivered</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h2 class="fw-bold text-primary-custom">50+</h2>
-                        <p class="text-muted">Enterprise Clients</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h2 class="fw-bold text-primary-custom">10+</h2>
-                        <p class="text-muted">Years Experience</p>
-                    </div>
-                    <div class="col-md-3">
-                        <h2 class="fw-bold text-primary-custom">24/7</h2>
-                        <p class="text-muted">Technical Support</p>
+                    <div class="col-md-3" v-for="(stat, i) in stats" :key="i">
+                        <h2 class="fw-bold counter">{{ stat.current }}+</h2>
+                        <p>{{ stat.label }}</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ================= WHY CHOOSE US ================= -->
-        <section class="py-5 bg-light">
+        <section class="py-5 bg-light reveal-section">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold text-primary-custom">Why Choose Us</h2>
-                    <p class="text-muted">What makes us different</p>
                 </div>
 
                 <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="value-card p-4 h-100 shadow-soft-custom rounded-4">
-                            <h5 class="fw-bold text-gold-custom mb-3">Scalable Architecture</h5>
-                            <p class="text-muted">Designed to grow with your business using modern frameworks and best practices.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="value-card p-4 h-100 shadow-soft-custom rounded-4">
-                            <h5 class="fw-bold text-gold-custom mb-3">Performance Focused</h5>
-                            <p class="text-muted">Optimized systems for speed, reliability and maintainability.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="value-card p-4 h-100 shadow-soft-custom rounded-4">
-                            <h5 class="fw-bold text-gold-custom mb-3">Modern Design</h5>
-                            <p class="text-muted">Clean, responsive and engaging UI/UX tailored to your brand.</p>
+                    <div class="col-md-4" v-for="(item, i) in values" :key="i">
+                        <div class="value-card h-100">
+                            <div class="image-wrapper">
+                                <img :src="item.image" alt="" />
+                            </div>
+                            <div class="p-4 text-center">
+                                <h5 class="fw-bold text-gold-custom mb-3">
+                                    {{ item.title }}
+                                </h5>
+                                <p class="text-muted">{{ item.desc }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,73 +66,23 @@
         </section>
 
         <!-- ================= PROCESS ================= -->
-        <section class="py-5">
+        <section class="process-section py-5 bg-light">
             <div class="container">
-                <div class="text-center mb-5">
+                <div class="text-center mb-5 reveal-section">
                     <h2 class="fw-bold text-primary-custom">Our Process</h2>
+                    <p class="text-muted">A streamlined maritime engineering approach ensuring safety, durability, and performance.</p>
                 </div>
 
                 <div class="row g-4 text-center">
-                    <div class="col-md-3">
-                        <div class="process-step p-4 rounded-4 shadow-soft-custom h-100">
-                            <h5 class="fw-bold text-gold-custom">1. Discovery</h5>
-                            <p class="text-muted">Understanding your business goals and requirements.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="process-step p-4 rounded-4 shadow-soft-custom h-100">
-                            <h5 class="fw-bold text-gold-custom">2. Planning</h5>
-                            <p class="text-muted">Architecting scalable and maintainable systems.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="process-step p-4 rounded-4 shadow-soft-custom h-100">
-                            <h5 class="fw-bold text-gold-custom">3. Development</h5>
-                            <p class="text-muted">Building high-quality production-ready solutions.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="process-step p-4 rounded-4 shadow-soft-custom h-100">
-                            <h5 class="fw-bold text-gold-custom">4. Deployment</h5>
-                            <p class="text-muted">Testing, launching and continuous support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= TEAM ================= -->
-        <section class="py-5 bg-light">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold text-primary-custom">Meet Our Team</h2>
-                </div>
-
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="team-card text-center p-4 shadow-soft-custom rounded-4">
-                            <div class="team-avatar mb-3"></div>
-                            <h5 class="fw-bold">John Carter</h5>
-                            <p class="text-muted mb-0">Lead Software Architect</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="team-card text-center p-4 shadow-soft-custom rounded-4">
-                            <div class="team-avatar mb-3"></div>
-                            <h5 class="fw-bold">Sarah Williams</h5>
-                            <p class="text-muted mb-0">UI/UX Designer</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="team-card text-center p-4 shadow-soft-custom rounded-4">
-                            <div class="team-avatar mb-3"></div>
-                            <h5 class="fw-bold">Michael Lee</h5>
-                            <p class="text-muted mb-0">Game Developer (Unity 3D)</p>
+                    <div class="col-lg-3 col-md-6" v-for="(step, i) in processSteps" :key="i">
+                        <div class="process-card reveal-section">
+                            <div class="process-image">
+                                <img :src="step.image" />
+                            </div>
+                            <h5 class="fw-bold mt-4 text-gold-custom">
+                                {{ step.title }}
+                            </h5>
+                            <p class="text-muted mt-2">{{ step.desc }}</p>
                         </div>
                     </div>
                 </div>
@@ -162,11 +90,12 @@
         </section>
 
         <!-- ================= CTA ================= -->
-        <section class="cta-section py-5 text-center text-white">
-            <div class="container">
-                <h3 class="fw-bold mb-3">Ready to Start Your Project?</h3>
-                <p class="mb-4">Let’s build something exceptional together.</p>
-                <button class="btn btn-lg btn-secondary-custom px-5">Contact Us Today</button>
+        <section class="cta-section text-center text-white d-flex align-items-center">
+            <div class="overlay-dark"></div>
+            <div class="container position-relative">
+                <h3 class="fw-bold mb-3">Ready to Build or Upgrade Your Vessel?</h3>
+                <p class="mb-4">Partner with us for reliable ship construction, maintenance, and repair solutions.</p>
+                <RouterLink to="/contact" class="btn btn-lg btn-secondary-custom px-5">Contact Us Today</RouterLink>
             </div>
         </section>
     </div>
@@ -175,53 +104,236 @@
 <script>
 export default {
     name: 'AboutPage',
+
+    data() {
+        return {
+            stats: [
+                { label: 'Ships Constructed', target: 120, current: 0 },
+                { label: 'Vessels Repaired', target: 350, current: 0 },
+                { label: 'Years in Maritime Industry', target: 25, current: 0 },
+                { label: 'Dry Dock Operations', target: 500, current: 0 },
+            ],
+
+            values: [
+                {
+                    image: '/assets/about-us-advanced-shipbuilding.png',
+                    title: 'Advanced Shipbuilding',
+                    desc: 'Modern shipyard facilities equipped for commercial and industrial vessel construction.',
+                },
+                {
+                    image: '/assets/about-us-comprehensive-repairs.png',
+                    title: 'Comprehensive Repairs',
+                    desc: 'Hull repairs, engine overhauls, steel fabrication, and structural reinforcement.',
+                },
+                {
+                    image: '/assets/about-us-certified-marine-engineers.png',
+                    title: 'Certified Marine Engineers',
+                    desc: 'Highly trained professionals ensuring compliance with international standards.',
+                },
+            ],
+
+            processSteps: [
+                {
+                    image: '/assets/about-us-consultation-inspection.png',
+                    title: 'Consultation & Inspection',
+                    desc: 'Detailed vessel inspection and engineering consultation.',
+                },
+                {
+                    image: '/assets/about-us-design-planning.png',
+                    title: 'Design & Planning',
+                    desc: 'Naval architecture planning and material selection.',
+                },
+                {
+                    image: '/assets/about-us-construction-repair.png',
+                    title: 'Construction / Repair',
+                    desc: 'Precision shipbuilding and system integration.',
+                },
+                {
+                    image: '/assets/about-us-testing-delivery.png',
+                    title: 'Testing & Delivery',
+                    desc: 'Sea trials, quality checks, and final deployment.',
+                },
+            ],
+        }
+    },
+
+    mounted() {
+        this.animateCounters()
+        this.revealOnScroll()
+    },
+
+    methods: {
+        animateCounters() {
+            this.stats.forEach((stat) => {
+                const update = () => {
+                    if (stat.current < stat.target) {
+                        stat.current += Math.ceil(stat.target / 100)
+                        requestAnimationFrame(update)
+                    } else {
+                        stat.current = stat.target
+                    }
+                }
+                update()
+            })
+        },
+
+        revealOnScroll() {
+            const sections = document.querySelectorAll('.reveal-section')
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) entry.target.classList.add('active')
+                    })
+                },
+                { threshold: 0.15 },
+            )
+            sections.forEach((section) => observer.observe(section))
+        },
+    },
 }
 </script>
 
 <style scoped>
-.text-primary-custom {
-    color: var(--color-primary);
-}
-
-.text-gold-custom {
-    color: var(--text-gold);
-}
-
-.shadow-soft-custom {
-    box-shadow: var(--shadow-soft);
-}
-
-.btn-secondary-custom {
-    background-color: var(--btn-secondary-bg);
-    color: var(--btn-secondary-text);
-    border: none;
-}
-
-.btn-secondary-custom:hover {
-    background-color: var(--btn-secondary-bg-hover);
-    color: var(--btn-secondary-text);
+/* HERO */
+.hero-section,
+.stats-section,
+.cta-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero-section {
-    background-color: var(--bg-primary);
+    background-image: url('/assets/about-us-page-hero.png');
+    min-height: 600px;
+}
+
+.stats-section {
+    background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df');
 }
 
 .cta-section {
-    background-color: var(--bg-dark);
+    background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+    min-height: 350px;
 }
 
-.info-card,
-.value-card,
-.process-step,
-.team-card {
-    background-color: var(--app-white);
+.overlay,
+.overlay-dark {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
 }
 
-.team-avatar {
-    width: 100px;
-    height: 100px;
-    background-color: var(--bg-primary);
-    border-radius: 50%;
-    margin: 0 auto;
+/* ANIMATION */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* REVEAL */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+.reveal-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* VALUE CARD */
+.value-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+}
+.value-card:hover {
+    transform: translateY(-10px);
+}
+.image-wrapper {
+    overflow: hidden;
+    height: 220px;
+}
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+.value-card:hover img {
+    transform: scale(1.1);
+}
+
+/* PROCESS */
+.process-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.4s ease;
+}
+.process-card:hover {
+    transform: translateY(-10px);
+}
+.process-image {
+    height: 160px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.process-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.process-card:hover img {
+    transform: scale(1.1);
+}
+
+.counter {
+    font-size: 3rem;
+}
+
+.btn-secondary-custom {
+    background: linear-gradient(45deg, #c6a75e, #e2c675);
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+}
+.btn-secondary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.hover-zoom {
+    transition: 0.5s ease;
+}
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 500px;
+    }
 }
 </style>
