@@ -122,8 +122,9 @@ const services = [
 .hero-section {
     min-height: 90vh;
     background:
-        linear-gradient(rgba(15, 30, 46, 0.75), rgba(15, 30, 46, 0.75)),
+        linear-gradient(#6549207d, #160f2e),
         url('/assets/home-hero.jpg') center / cover no-repeat;
+    /* linear-gradient(rgba(15, 30, 46, 0.75), rgba(15, 30, 46, 0.75)),url('/assets/home-hero.png') center / cover no-repeat; */
     background-attachment: fixed;
 }
 
@@ -203,7 +204,7 @@ const services = [
     min-height: 45vh;
     background:
         linear-gradient(rgba(15, 30, 46, 0.85), rgba(15, 30, 46, 0.85)),
-        url('/assets/home-hero.jpg') center / cover no-repeat;
+        url('/assets/home-hero.png') center / cover no-repeat;
     background-attachment: fixed;
 }
 
