@@ -4,24 +4,14 @@
             title="Ship Building, Maintenance & Repair"
             description="Delivering world-class ship construction, marine engineering, maintenance, and repair solutions with precision and reliability."
             bgImage="/assets/about-us-page-hero.png"
-            :buttons="[{ label: 'Explore Our Services', to: '/services', class: 'btn-secondary-custom' }]"
+            :buttons="[{ label: 'Explore Our Services', to: '/services', class: 'btn-gold' }]"
         />
 
-        <section class="py-5 bg-light reveal-section">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <img src="/assets/about-us-our-story.png" class="img-fluid rounded-4 shadow-soft-custom hover-zoom" alt="Shipyard Operations" />
-                    </div>
-                    <div class="col-lg-6">
-                        <h2 class="fw-bold text-primary-custom mb-4">Our Story</h2>
-                        <p class="text-muted">Founded with a commitment to maritime excellence and engineering precision.</p>
-                        <p class="text-muted">We specialize in shipbuilding, vessel retrofitting, dry docking, marine system upgrades, and structural repairs for commercial and industrial fleets.</p>
-                        <p class="text-muted">Our philosophy is simple: build durable vessels, ensure operational efficiency, and maintain the highest international safety standards.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <MediaTextSection title="Our Story" imageSrc="/assets/about-us-our-story.png" imageAlt="Shipyard Operations">
+            <p class="text-muted">Founded with a commitment to maritime excellence and engineering precision.</p>
+            <p class="text-muted">We specialize in shipbuilding, vessel retrofitting, dry docking, marine system upgrades, and structural repairs for commercial and industrial fleets.</p>
+            <p class="text-muted">Our philosophy is simple: build durable vessels, ensure operational efficiency, and maintain the highest international safety standards.</p>
+        </MediaTextSection>
 
         <section class="py-5 text-center stats-section text-white">
             <div class="overlay-dark"></div>
@@ -82,24 +72,26 @@
             </div>
         </section>
 
-        <section class="cta-section text-center text-white d-flex align-items-center">
-            <div class="overlay-dark"></div>
-            <div class="container position-relative">
-                <h3 class="fw-bold mb-3">Ready to Build or Upgrade Your Vessel?</h3>
-                <p class="mb-4">Partner with us for reliable ship construction, maintenance, and repair solutions.</p>
-                <RouterLink to="/contact" class="btn btn-lg btn-secondary-custom px-5">Contact Us Today</RouterLink>
-            </div>
-        </section>
+        <CtaSection
+            title="Ready to Build or Upgrade Your Vessel?"
+            description="Partner with us for reliable ship construction, maintenance, and repair solutions."
+            bgImage="/assets/about-us-cta-section.jpg"
+            :buttons="[{ label: 'Contact Us Today', to: '/contact', class: 'btn-gold' }]"
+        />
     </div>
 </template>
 
 <script>
 import PageHero from '@/components/sections/PageHero.vue' // Adjust the import path as necessary
+import MediaTextSection from '@/components/sections/MediaTextSection.vue' // Import the new component
+import CtaSection from '@/components/sections/CtaSection.vue'
 
 export default {
     name: 'AboutPage',
     components: {
         PageHero,
+        MediaTextSection,
+        CtaSection,
     },
     data() {
         return {
@@ -155,7 +147,6 @@ export default {
 
     mounted() {
         this.animateCounters()
-        this.revealOnScroll()
     },
 
     methods: {
@@ -171,19 +162,6 @@ export default {
                 }
                 update()
             })
-        },
-
-        revealOnScroll() {
-            const sections = document.querySelectorAll('.reveal-section')
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) entry.target.classList.add('active')
-                    })
-                },
-                { threshold: 0.15 },
-            )
-            sections.forEach((section) => observer.observe(section))
         },
     },
 }
