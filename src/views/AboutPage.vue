@@ -1,16 +1,12 @@
 <template>
     <div class="about-page">
-        <!-- ================= HERO ================= -->
-        <section class="hero-section text-white text-center d-flex align-items-center">
-            <div class="overlay"></div>
-            <div class="container position-relative hero-content">
-                <h1 class="display-3 fw-bold mb-3 animate-fade-up">Ship Building, Maintenance & Repair</h1>
-                <p class="lead col-lg-8 mx-auto mb-4 animate-fade-up delay-1">Delivering world-class ship construction, marine engineering, maintenance, and repair solutions with precision and reliability.</p>
-                <RouterLink to="/services" class="btn btn-lg btn-secondary-custom px-4 animate-fade-up delay-2">Explore Our Services</RouterLink>
-            </div>
-        </section>
+        <PageHero
+            title="Ship Building, Maintenance & Repair"
+            description="Delivering world-class ship construction, marine engineering, maintenance, and repair solutions with precision and reliability."
+            bgImage="/assets/about-us-page-hero.png"
+            :buttons="[{ label: 'Explore Our Services', to: '/services', class: 'btn-secondary-custom' }]"
+        />
 
-        <!-- ================= STORY ================= -->
         <section class="py-5 bg-light reveal-section">
             <div class="container">
                 <div class="row g-5 align-items-center">
@@ -27,7 +23,6 @@
             </div>
         </section>
 
-        <!-- ================= STATS ================= -->
         <section class="py-5 text-center stats-section text-white">
             <div class="overlay-dark"></div>
             <div class="container position-relative">
@@ -40,7 +35,6 @@
             </div>
         </section>
 
-        <!-- ================= WHY CHOOSE US ================= -->
         <section class="py-5 bg-light reveal-section">
             <div class="container">
                 <div class="text-center mb-5">
@@ -65,7 +59,6 @@
             </div>
         </section>
 
-        <!-- ================= PROCESS ================= -->
         <section class="process-section py-5 bg-light">
             <div class="container">
                 <div class="text-center mb-5 reveal-section">
@@ -89,7 +82,6 @@
             </div>
         </section>
 
-        <!-- ================= CTA ================= -->
         <section class="cta-section text-center text-white d-flex align-items-center">
             <div class="overlay-dark"></div>
             <div class="container position-relative">
@@ -102,9 +94,13 @@
 </template>
 
 <script>
+import PageHero from '@/components/sections/PageHero.vue' // Adjust the import path as necessary
+
 export default {
     name: 'AboutPage',
-
+    components: {
+        PageHero,
+    },
     data() {
         return {
             stats: [
@@ -194,8 +190,7 @@ export default {
 </script>
 
 <style scoped>
-/* HERO */
-.hero-section,
+/* GENERAL SECTION STYLES */
 .stats-section,
 .cta-section {
     background-attachment: fixed;
@@ -203,11 +198,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-}
-
-.hero-section {
-    background-image: url('/assets/about-us-page-hero.png');
-    min-height: 600px;
 }
 
 .stats-section {
@@ -219,32 +209,10 @@ export default {
     min-height: 350px;
 }
 
-.overlay,
 .overlay-dark {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.65);
-}
-
-/* ANIMATION */
-.animate-fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s forwards;
-}
-
-.delay-1 {
-    animation-delay: 0.3s;
-}
-.delay-2 {
-    animation-delay: 0.6s;
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* REVEAL */
@@ -313,6 +281,7 @@ export default {
     font-size: 3rem;
 }
 
+/* Retained for the CTA Button */
 .btn-secondary-custom {
     background: linear-gradient(45deg, #c6a75e, #e2c675);
     border: none;
@@ -329,11 +298,5 @@ export default {
 }
 .hover-zoom:hover {
     transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: 500px;
-    }
 }
 </style>
