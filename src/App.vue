@@ -11,10 +11,10 @@
 </template>
 
 <script setup>
-import AppNavbar from '@/components/AppNavbar.vue'
-import AppFooter from '@/components/AppFooter.vue'
-import BottomBar from '@/components/BottomBar.vue'
-import TopBar from '@/components/TopBar.vue'
+import AppNavbar from '@/components/layout/AppNavbar.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
+import BottomBar from '@/components/layout/BottomBar.vue'
+import TopBar from '@/components/layout/TopBar.vue'
 </script>
 
 <style scoped>
