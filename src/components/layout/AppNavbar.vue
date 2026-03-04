@@ -16,15 +16,15 @@
                 <ul class="navbar-nav align-items-lg-center gap-lg-2">
                     <li class="nav-item"><router-link to="/about" class="nav-link">Company</router-link></li>
                     <li class="nav-item"><router-link to="/services" class="nav-link">Services</router-link></li>
-                    <li class="nav-item"><router-link to="/experience" class="nav-link">Experience</router-link></li>
-                    <li class="nav-item"><router-link to="/vacancies" class="nav-link">Vacancies</router-link></li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item"><router-link to="/experience" class="nav-link">Experience</router-link></li> -->
+                    <!-- <li class="nav-item"><router-link to="/vacancies" class="nav-link">Vacancies</router-link></li> -->
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> News </a>
                         <ul class="dropdown-menu shadow border-0 rounded-0">
                             <li><router-link to="/news" class="dropdown-item"> All News </router-link></li>
                             <li><router-link to="/press" class="dropdown-item"> Press Releases </router-link></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="nav-item"><router-link to="/contact" class="nav-link">Contact</router-link></li>
                 </ul>
             </div>

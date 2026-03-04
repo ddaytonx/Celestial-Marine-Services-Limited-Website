@@ -47,9 +47,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Our Office</h5>
                         <hr />
-                        <p><i class="bi bi-geo-alt-fill me-2"></i>123 Ocean Drive, Port City, NY 10001, USA</p>
+                        <p><i class="bi bi-geo-alt-fill me-2"></i>Room 1101, 11/F., Capital Centre, 151 Gloucester Road, Wanchai, Hong Kong, China</p>
                         <p><i class="bi bi-telephone-fill me-2"></i>+1 234 567 890</p>
-                        <p><i class="bi bi-envelope-fill me-2"></i>info@celestialmarineservices.com</p>
+                        <p><i class="bi bi-envelope-fill me-2"></i>commercial@celestialmarineservices.com</p>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,15 @@
                 <h5>Our Location</h5>
                 <hr />
                 <div class="map-responsive mt-3">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.234567!2d-74.005941!3d40.712784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sYour+Business!5e0!3m2!1sen!2sus!4v1678901234567" width="100%" height="400" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.234567!2d-74.005941!3d40.712784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sYour+Business!5e0!3m2!1sen!2sus!4v1678901234567"
+                        width="100%"
+                        height="400"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
                 </div>
             </div>
         </div>

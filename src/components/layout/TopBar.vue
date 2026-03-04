@@ -3,7 +3,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="top-left">
                 <span>📞 +1 234 567 890</span>
-                <span>✉ info@celestialmarineservices.com</span>
+                <span>✉ commercial@celestialmarineservices.com</span>
             </div>
 
             <div class="top-right">

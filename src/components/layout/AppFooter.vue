@@ -7,9 +7,9 @@
                 <div class="col-md-4 footer-brand">
                     <h4>Celestial Marine Services Limited</h4>
                     <div class="footer-contact mt-3">
-                        <p><i class="bi bi-geo-alt"></i>123 Ocean Drive, Port City, NY 10001, USA</p>
+                        <p><i class="bi bi-geo-alt"></i>Room 1101, 11/F., Capital Centre, 151 Gloucester Road, Wanchai, Hong Kong, China</p>
                         <p><i class="bi bi-telephone"></i>+1 234 567 890</p>
-                        <p><i class="bi bi-envelope"></i>info@celestialmarineservices.com</p>
+                        <p><i class="bi bi-envelope"></i>commercial@celestialmarineservices.com</p>
                     </div>
                     <div class="social-links d-flex gap-3 mt-3">
                         <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
