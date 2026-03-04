@@ -1,4 +1,7 @@
 <script setup>
+import PageHero from '@/components/sections/PageHero.vue'
+import CtaSection from '@/components/sections/CtaSection.vue'
+
 /* FEATURES */
 const features = [
     {
@@ -52,23 +55,21 @@ const services = [
 
 <template>
     <!-- HERO -->
-    <section class="hero-section d-flex align-items-center text-white text-center">
-        <div class="container">
-            <div class="hero-content mx-auto" data-aos="fade-up">
-                <h1 class="hero-title">
-                    Trusted Maritime <br />
-                    <span class="text-gold">Technical & Project Experts</span>
-                </h1>
-
-                <p class="hero-subtitle mt-3">Technical solutions · Global project delivery · Strategic marine consulting</p>
-
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <router-link to="/about" class="btn btn-gold"> About Us </router-link>
-                    <router-link to="/services" class="btn btn-outline-light btn-rounded"> Our Services </router-link>
-                </div>
-            </div>
-        </div>
-    </section>
+    <PageHero
+        bgImage="/assets/home-hero.jpg"
+        customClass="height-90"
+        :useHomeOverlay="true"
+        subtitle="Technical solutions · Global project delivery · Strategic marine consulting"
+        :buttons="[
+            { label: 'About Us', to: '/about', class: 'btn-gold' },
+            { label: 'Our Services', to: '/services', class: 'btn-outline-light btn-rounded' },
+        ]"
+    >
+        <template #title>
+            Trusted Maritime <br />
+            <span class="text-gold">Technical & Project Experts</span>
+        </template>
+    </PageHero>
 
     <!-- WHAT SETS US APART -->
     <section class="py-5 bg-light">
@@ -108,45 +109,15 @@ const services = [
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section text-center text-white d-flex align-items-center">
-        <div class="container" data-aos="fade-up">
-            <h2 class="mb-4">Partner With Excellence on the Water</h2>
-            <router-link to="/contact" class="btn btn-gold btn-lg"> Contact Our Team </router-link>
-        </div>
-    </section>
+    <CtaSection
+        title="Partner With Excellence on the Water"
+        description="From custom builds to precision repairs, we provide the engineering excellence your fleet deserves. Let’s get to work."
+        bgImage="/assets/home-hero.png"
+        :buttons="[{ label: 'Contact Our Team', to: '/contact', class: 'btn-gold' }]"
+    />
 </template>
 
 <style scoped>
-/* HERO */
-.hero-section {
-    min-height: 90vh;
-    background:
-        linear-gradient(#6549207d, #160f2e),
-        url('/assets/home-hero.jpg') center / cover no-repeat;
-    /* linear-gradient(rgba(15, 30, 46, 0.75), rgba(15, 30, 46, 0.75)),url('/assets/home-hero.png') center / cover no-repeat; */
-    background-attachment: fixed;
-}
-
-.hero-content {
-    max-width: 750px;
-}
-
-.hero-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.hero-subtitle {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.text-gold {
-    color: var(--app-gold);
-}
-
 /* SECTION TITLES */
 .section-title,
 .section-title-light {
@@ -199,20 +170,6 @@ const services = [
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* CTA */
-.cta-section {
-    min-height: 45vh;
-    background:
-        linear-gradient(rgba(15, 30, 46, 0.85), rgba(15, 30, 46, 0.85)),
-        url('/assets/home-hero.png') center / cover no-repeat;
-    background-attachment: fixed;
-}
-
-.cta-section h2 {
-    font-size: 2.2rem;
-    font-weight: 600;
-}
-
 /* BUTTONS */
 .btn-gold {
     background: linear-gradient(135deg, var(--app-gold), var(--color-secondary-dark));
@@ -246,14 +203,8 @@ const services = [
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-    .hero-section,
-    .featured-services,
-    .cta-section {
+    .featured-services {
         background-attachment: scroll;
-    }
-
-    .hero-title {
-        font-size: 2rem;
     }
 }
 </style>
