@@ -58,7 +58,7 @@ const services = [
     <PageHero
         bgImage="/assets/home-hero.jpg"
         customClass="height-90"
-        :useHomeOverlay="true"
+        :useHomeOverlay="false"
         subtitle="Technical solutions · Global project delivery · Strategic marine consulting"
         :buttons="[
             { label: 'About Us', to: '/about', class: 'btn-gold' },
