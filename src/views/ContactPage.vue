@@ -62,9 +62,9 @@
                 <hr />
                 <div class="map-responsive mt-3">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.234567!2d-74.005941!3d40.712784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sYour+Business!5e0!3m2!1sen!2sus!4v1678901234567"
-                        width="100%"
-                        height="400"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.9617203781677!2d114.17470857586599!3d22.279439843650177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404005a2f330df5%3A0xc826b87425d700a5!2sCapital%20Centre!5e0!3m2!1sen!2sin!4v1773342638387!5m2!1sen!2sin"
+                        width="600"
+                        height="450"
                         style="border: 0"
                         allowfullscreen=""
                         loading="lazy"

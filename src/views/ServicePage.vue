@@ -2,7 +2,7 @@
     <PageHero
         title="Engineering the Future of Maritime Excellence"
         description="Specializing in shipbuilding, retrofit solutions, and advanced marine maintenance, we combine innovation, craftsmanship, and global standards to power the next generation of vessels."
-        bgImage="/assets/about-us-page-hero.png"
+        bgImage="/assets/home-hero.jpg"
         :buttons="heroButtons"
     />
 
