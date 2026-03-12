@@ -69,7 +69,7 @@ export default {
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.35);
     z-index: 1;
 }
 

@@ -2,7 +2,7 @@
     <div class="top-bar">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="top-left">
-                <span>📞 +1 234 567 890</span>
+                <span>📞 +91 9882455421</span>
                 <span>✉ commercial@celestialmarineservices.com</span>
             </div>
 

@@ -48,7 +48,7 @@
                         <h5 class="card-title">Our Office</h5>
                         <hr />
                         <p><i class="bi bi-geo-alt-fill me-2"></i>Room 1101, 11/F., Capital Centre, 151 Gloucester Road, Wanchai, Hong Kong, China</p>
-                        <p><i class="bi bi-telephone-fill me-2"></i>+1 234 567 890</p>
+                        <p><i class="bi bi-telephone-fill me-2"></i>+91 9882455421</p>
                         <p><i class="bi bi-envelope-fill me-2"></i>commercial@celestialmarineservices.com</p>
                     </div>
                 </div>
