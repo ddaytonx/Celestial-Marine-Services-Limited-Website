@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row g-5 align-items-center" :class="{ 'flex-row-reverse': imageRight }">
                 <div class="col-lg-6">
-                    <img :src="imageSrc" :alt="imageAlt" class="img-fluid rounded-4 shadow-soft-custom hover-zoom" />
+                    <img :src="image" :alt="imageAlt" class="img-fluid rounded-4 shadow-soft-custom hover-zoom" />
                 </div>
                 <div class="col-lg-6">
                     <h2 class="fw-bold text-primary-custom mb-4">
@@ -29,7 +29,7 @@ export default {
     props: {
         title: { type: String, default: '' },
         description: { type: String, default: '' },
-        imageSrc: { type: String, required: true },
+        image: { type: String, required: true },
         imageAlt: { type: String, default: 'Section Image' },
         imageRight: { type: Boolean, default: false },
         customClass: { type: String, default: '' },

@@ -1,8 +1,5 @@
 <template>
-    <!-- STICKY COPYRIGHT -->
     <div class="copyright-bar">&copy; {{ year }} {{ companyName }}. All Rights Reserved.</div>
-
-    <!-- LEGAL LINKS -->
     <div class="legal-bar">
         <ul>
             <li><a href="#">Privacy Policy</a></li>
@@ -13,8 +10,8 @@
 </template>
 
 <script setup>
-const companyName = 'Maritime Services'
-const year = new Date().getFullYear()
+import legal from '@/data/legal.json'
+const { year, companyName } = legal
 </script>
 
 <style scoped>

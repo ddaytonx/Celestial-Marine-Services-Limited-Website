@@ -1,56 +1,9 @@
 <script setup>
 import PageHero from '@/components/sections/PageHero.vue'
 import CtaSection from '@/components/sections/CtaSection.vue'
+import servicesData from '@/data/services.json'
 
-/* FEATURES */
-const features = [
-    {
-        icon: '⚙️',
-        title: 'Technical Expertise',
-        description: 'Extensive maritime engineering and technical consultancy services delivered by seasoned industry professionals.',
-        delay: 100,
-    },
-    {
-        icon: '🌍',
-        title: 'Global Project Execution',
-        description: 'Expert management of maritime operating processes with emphasis on safety, efficiency, and regulatory compliance.',
-        delay: 200,
-    },
-    {
-        icon: '🛠️',
-        title: 'Tailored Marine Solutions',
-        description: 'Customized solutions aligned with operational objectives, ensuring reliable and sustainable performance.',
-        delay: 300,
-    },
-]
-
-/* SERVICES */
-const services = [
-    {
-        icon: '🚢',
-        title: 'Marine Engineering',
-        description: 'Advanced engineering solutions tailored to marine operations.',
-        delay: 100,
-    },
-    {
-        icon: '⚓',
-        title: 'Project Management',
-        description: 'End-to-end project oversight ensuring timely delivery.',
-        delay: 200,
-    },
-    {
-        icon: '📋',
-        title: 'Technical Assessments',
-        description: 'Independent audits, inspections, and certifications.',
-        delay: 300,
-    },
-    {
-        icon: '🛡️',
-        title: 'Compliance & Advisory',
-        description: 'Regulatory guidance and risk mitigation strategies.',
-        delay: 400,
-    },
-]
+const { features, services } = servicesData
 </script>
 
 <template>
@@ -59,16 +12,13 @@ const services = [
         bgImage="/assets/home-hero.jpg"
         customClass="height-90"
         :useHomeOverlay="false"
-        subtitle="Technical solutions · Global project delivery · Strategic marine consulting"
+        subtitle="Newbuilding supervision · Technical consultancy · Real-time monitoring"
         :buttons="[
             { label: 'About Us', to: '/about', class: 'btn-gold' },
             { label: 'Our Services', to: '/services', class: 'btn-outline-light btn-rounded' },
         ]"
     >
-        <template #title>
-            Trusted Maritime <br />
-            <span class="text-gold">Technical & Project Experts</span>
-        </template>
+        <template #title> Expert Newbuilding Supervision & Maritime Consultancy</template>
     </PageHero>
 
     <!-- WHAT SETS US APART -->
@@ -110,15 +60,14 @@ const services = [
     </section>
 
     <CtaSection
-        title="Partner With Excellence on the Water"
-        description="From custom builds to precision repairs, we provide the engineering excellence your fleet deserves. Let’s get to work."
+        title="Trusted Supervision for Every Stage of Construction"
+        description="From initial planning to final delivery, we provide expert newbuilding supervision, technical consultancy, and real-time monitoring to support successful maritime projects."
         bgImage="/assets/home-hero.png"
         :buttons="[{ label: 'Contact Our Team', to: '/contact', class: 'btn-gold' }]"
     />
 </template>
 
 <style scoped>
-/* SECTION TITLES */
 .section-title,
 .section-title-light {
     font-size: 2rem;
@@ -130,14 +79,13 @@ const services = [
 .section-title::after,
 .section-title-light::after {
     content: '';
-    width: 60px;
+    width: 25%;
     height: 3px;
     background: var(--app-gold);
     display: block;
     margin: 12px auto 0;
 }
 
-/* CARDS */
 .custom-card {
     border: none;
     border-radius: 12px;
@@ -150,7 +98,6 @@ const services = [
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* SERVICE CARDS */
 .featured-services {
     background:
         linear-gradient(rgba(15, 30, 46, 0.85), rgba(15, 30, 46, 0.85)),
@@ -170,7 +117,6 @@ const services = [
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* BUTTONS */
 .btn-gold {
     background: linear-gradient(135deg, var(--app-gold), var(--color-secondary-dark));
     color: #fff;
@@ -190,7 +136,6 @@ const services = [
     border-radius: 50px;
 }
 
-/* ICON */
 .icon {
     font-size: 3.5rem;
     transition: transform 0.3s ease;
@@ -201,7 +146,6 @@ const services = [
     transform: scale(1.1);
 }
 
-/* MOBILE FIX */
 @media (max-width: 768px) {
     .featured-services {
         background-attachment: scroll;

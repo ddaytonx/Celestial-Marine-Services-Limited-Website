@@ -1,0 +1,101 @@
+{
+  "features": [
+    {
+      "icon": "🚢",
+      "image": "/assets/about-us-advanced-shipbuilding.png",
+      "title": "Ship Building Supervision",
+      "description": "From initial planning to final delivery, every vessel is supervised to ensure the highest standards of quality, safety, and performance.",
+      "delay": 100
+    },
+    {
+      "icon": "🧭",
+      "image": "/assets/about-us-comprehensive-repairs.png",
+      "title": "Technical Consultancy and Project Support",
+      "description": "Tailored technical consultancy and project support designed to enhance the value, efficiency, and long-term success of your maritime operations.",
+      "delay": 200
+    },
+    {
+      "icon": "📡",
+      "image": "/assets/about-us-certified-marine-engineers.png",
+      "title": "Real-Time Online Monitoring",
+      "description": "24/7 updates to monitor the progress of newbuilding assets at every stage of construction.",
+      "delay": 300
+    }
+  ],
+  "services": [
+    {
+      "icon": "🏗️",
+      "title": "Newbuilding Supervision",
+      "image": "/assets/about-us-our-story.png",
+      "imageRight": false,
+      "description": "Comprehensive oversight throughout the vessel construction process, from planning and yard coordination to delivery.",
+      "descriptionStack": [
+        "Comprehensive supervision services covering every phase of the shipbuilding process, from initial planning and technical coordination to construction oversight and final delivery.",
+        "Close collaboration with shipyards, owners, designers, and contractors ensures work is carried out in line with approved specifications, quality standards, and project milestones.",
+        "Focused on maintaining build quality, regulatory compliance, cost control, and timely completion while reducing risks throughout the newbuilding program."
+      ],
+      "delay": 100
+    },
+    {
+      "icon": "⚙️",
+      "title": "Technical Consultancy",
+      "image": "/assets/about-us-our-story.png",
+      "imageRight": true,
+      "description": "Specialist maritime consultancy covering technical reviews, operational advice, and project-specific support.",
+      "descriptionStack": [
+        "Specialized maritime consultancy services providing technical advice, engineering insight, and practical solutions for a wide range of shipbuilding and marine operational requirements.",
+        "Support includes technical reviews, specification evaluation, design coordination, system assessments, and guidance for efficient and reliable project execution.",
+        "Our consultancy approach improves decision-making, enhances vessel performance, and ensures technical objectives align with operational and commercial goals."
+      ],
+      "delay": 200
+    },
+    {
+      "icon": "📈",
+      "title": "Project Support",
+      "image": "/assets/about-us-our-story.png",
+      "imageRight": false,
+      "description": "Dedicated support to keep shipbuilding projects aligned with timelines, budgets, and technical expectations.",
+      "descriptionStack": [
+        "Dedicated project support services designed to strengthen coordination, communication, and control across all stages of maritime construction and delivery projects.",
+        "Assistance is provided in project planning, documentation follow-up, progress evaluation, stakeholder coordination, and reporting to keep activities organized and on schedule.",
+        "By maintaining clear oversight of key tasks, timelines, and deliverables, we help clients achieve greater efficiency, accountability, and consistency throughout the project lifecycle."
+      ],
+      "delay": 300
+    },
+    {
+      "icon": "🖥️",
+      "title": "Online Progress Monitoring",
+      "image": "/assets/about-us-our-story.png",
+      "imageRight": true,
+      "description": "Real-time reporting and digital monitoring solutions that provide visibility into each stage of construction.",
+      "descriptionStack": [
+        "Real-time online monitoring solutions provide continuous visibility into construction activities, project milestones, and vessel build progress at every critical stage.",
+        "Structured reporting and digital updates enable owners and stakeholders to stay informed, review developments quickly, and respond effectively to project changes.",
+        "This transparent monitoring approach supports better control, faster decision-making, and stronger confidence in successful project execution and delivery."
+      ],
+      "delay": 400
+    }
+  ],
+  "processSteps": [
+    {
+      "image": "/assets/about-us-consultation-inspection.png",
+      "title": "Consultation & Planning",
+      "desc": "Understanding project requirements, technical scope, and construction objectives from the start."
+    },
+    {
+      "image": "/assets/about-us-design-planning.png",
+      "title": "Technical Review & Coordination",
+      "desc": "Providing expert consultancy, design input, and project coordination throughout the build process."
+    },
+    {
+      "image": "/assets/about-us-construction-repair.png",
+      "title": "Supervision & Monitoring",
+      "desc": "Overseeing shipbuilding activities and monitoring progress in real time to maintain standards and schedules."
+    },
+    {
+      "image": "/assets/about-us-testing-delivery.png",
+      "title": "Final Review & Delivery",
+      "desc": "Ensuring all quality checks, compliance requirements, and delivery expectations are successfully met."
+    }
+  ]
+}

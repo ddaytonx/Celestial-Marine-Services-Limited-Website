@@ -15,7 +15,7 @@
                             <h5 class="fw-bold text-gold-custom mb-3">
                                 {{ item.title }}
                             </h5>
-                            <p class="text-muted">{{ item.desc }}</p>
+                            <p class="text-muted">{{ item.description }}</p>
                         </div>
                     </div>
                 </div>
