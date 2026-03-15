@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-bottom-shadow sticky-top">
         <div class="container">
             <!-- Logo -->
             <router-link to="/" class="navbar-brand p-0">
@@ -76,5 +76,9 @@
     .navbar-brand img {
         height: 70px;
     }
+}
+
+.border-bottom-shadow {
+    box-shadow: 0 4px 12px rgb(15 30 46 / 10%);
 }
 </style>
