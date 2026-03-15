@@ -7,14 +7,14 @@
                 <div class="col-md-4 footer-brand">
                     <h4>Celestial Marine Services Limited</h4>
                     <div class="footer-contact mt-3">
-                        <p><i class="bi bi-geo-alt"></i>Room 1101, 11/F., Capital Centre, 151 Gloucester Road, Wanchai, Hong Kong, China</p>
-                        <p><i class="bi bi-telephone"></i>+91 9882455421</p>
-                        <p><i class="bi bi-envelope"></i>commercial@celestialmarineservices.com</p>
+                        <p><i class="bi bi-geo-alt"></i>{{ contactData?.office?.address }}</p>
+                        <p><i class="bi bi-telephone"></i>{{ contactData?.office?.phone }}</p>
+                        <p><i class="bi bi-envelope"></i>{{ contactData?.office?.email }}</p>
                     </div>
                     <div class="social-links d-flex gap-3 mt-3">
-                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a v-for="social in contactData?.social?.filter((s) => s.enabled)" :key="social.icon" :href="social.url" target="_blank" rel="noopener" class="me-3">
+                            <i :class="['bi', social.icon]"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -52,7 +52,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import contactDataJson from '@/data/contact.json'
 
+const contactData = ref(contactDataJson)
 const email = ref('')
 const successMessage = ref('')
 

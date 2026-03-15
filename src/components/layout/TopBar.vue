@@ -2,26 +2,24 @@
     <div class="top-bar">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="top-left">
-                <span>📞 +91 9882455421</span>
-                <span>✉ commercial@celestialmarineservices.com</span>
+                <span>📞 {{ contactData?.office?.phone }}</span>
+                <span>✉ {{ contactData?.office?.email }}</span>
             </div>
 
             <div class="top-right">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener">
-                    <i class="bi bi-facebook"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener">
-                    <i class="bi bi-twitter-x"></i>
-                </a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
-                    <i class="bi bi-linkedin"></i>
+                <a v-for="social in contactData?.social?.filter((s) => s.enabled)" :key="social.icon" :href="social.url" target="_blank" rel="noopener">
+                    <i :class="['bi', social.icon]"></i>
                 </a>
             </div>
         </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import contactDataJson from '@/data/contact.json'
+const contactData = ref(contactDataJson)
+</script>
 
 <style scoped>
 .top-bar {

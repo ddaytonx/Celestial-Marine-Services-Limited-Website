@@ -1,0 +1,28 @@
+{
+  "office": {
+    "title": "Our Office",
+    "address": "Room 1101, 11/F., Capital Centre, 151 Gloucester Road, Wanchai, Hong Kong, China",
+    "phone": "+91 9882455421",
+    "email": "commercial@celestialmarineservices.com"
+  },
+  "map": {
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.9617203781677!2d114.17470857586599!3d22.279439843650177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404005a2f330df5%3A0xc826b87425d700a5!2sCapital%20Centre!5e0!3m2!1sen!2sin!4v1773342638387!5m2!1sen!2sin"
+  },
+  "social": [
+    {
+      "icon": "bi-facebook",
+      "url": "https://www.facebook.com/",
+      "enabled": false
+    },
+    {
+      "icon": "bi-twitter-x",
+      "url": "https://twitter.com/",
+      "enabled": false
+    },
+    {
+      "icon": "bi-linkedin",
+      "url": "https://www.linkedin.com/",
+      "enabled": false
+    }
+  ]
+}

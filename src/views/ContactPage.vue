@@ -1,10 +1,7 @@
 <template>
     <div class="container my-5">
         <h2 class="text-center mb-5">Contact Us</h2>
-
-        <!-- ROW 1: 3 COLUMNS WITH CARDS -->
         <div class="row mb-5 g-4">
-            <!-- Column 1: Get in Touch -->
             <div class="col-lg-4">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="card-body">
@@ -14,8 +11,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Column 2: Contact Form -->
             <div class="col-lg-4">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="card-body">
@@ -40,36 +35,33 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Column 3: Office Info -->
             <div class="col-lg-4">
                 <div class="card h-100 shadow-sm border-0">
                     <div class="card-body">
-                        <h5 class="card-title">Our Office</h5>
+                        <h5 class="card-title">{{ contactData?.office?.title }}</h5>
                         <hr />
-                        <p><i class="bi bi-geo-alt-fill me-2"></i>Room 1101, 11/F., Capital Centre, 151 Gloucester Road, Wanchai, Hong Kong, China</p>
-                        <p><i class="bi bi-telephone-fill me-2"></i>+91 9882455421</p>
-                        <p><i class="bi bi-envelope-fill me-2"></i>commercial@celestialmarineservices.com</p>
+                        <p>
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            {{ contactData?.office?.address }}
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            {{ contactData?.office?.phone }}
+                        </p>
+                        <p>
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            {{ contactData?.office?.email }}
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- ROW 2: FULL WIDTH MAP -->
         <div class="row">
             <div class="col-12">
                 <h5>Our Location</h5>
                 <hr />
                 <div class="map-responsive mt-3">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.9617203781677!2d114.17470857586599!3d22.279439843650177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404005a2f330df5%3A0xc826b87425d700a5!2sCapital%20Centre!5e0!3m2!1sen!2sin!4v1773342638387!5m2!1sen!2sin"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
+                    <iframe :src="contactData?.map?.embedUrl" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
                 </div>
             </div>
         </div>
@@ -78,7 +70,9 @@
 
 <script setup>
 import { ref } from 'vue'
+import contactDataJson from '@/data/contact.json'
 
+const contactData = ref(contactDataJson)
 const form = ref({ name: '', email: '', message: '' })
 const successMessage = ref('')
 
@@ -101,6 +95,7 @@ function submitForm() {
     position: relative;
     height: 0;
 }
+
 .map-responsive iframe {
     left: 0;
     top: 0;
@@ -111,18 +106,19 @@ function submitForm() {
     border: 0;
 }
 
-/* Button style using root variables */
+/* Button style */
 .btn-gold {
     background-color: var(--btn-secondary-bg);
     color: var(--btn-secondary-text);
     font-weight: 500;
     transition: background-color 0.2s ease;
 }
+
 .btn-gold:hover {
     background-color: var(--btn-secondary-bg-hover);
 }
 
-/* Card styling using root variables */
+/* Card styling */
 .card {
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -143,13 +139,13 @@ function submitForm() {
     font-weight: 400;
 }
 
-/* Divider style */
+/* Divider */
 hr {
     border-top: 2px solid var(--text-gold);
     margin: 0.5rem 0 1rem 0;
 }
 
-/* Form input styling */
+/* Form inputs */
 .card input,
 .card textarea {
     border: 1px solid var(--border-color);
@@ -159,11 +155,11 @@ hr {
     color: var(--text-dark);
 }
 
-/* Form input focus state */
+/* Focus */
 .card input:focus,
 .card textarea:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 0.2rem rgba(31, 58, 95, 0.25); /* primary-light transparent */
+    box-shadow: 0 0 0 0.2rem rgba(31, 58, 95, 0.25);
     outline: none;
 }
 
