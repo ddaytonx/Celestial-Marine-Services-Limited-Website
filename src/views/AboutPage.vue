@@ -2,19 +2,21 @@
     <div class="about-page">
         <PageHero
             title="Ship Building, Dry Docking, Retrofit and Repairs."
-            description="Delivering world-class ship construction, marine engineering, maintenance, and repair solutions with precision and reliability."
+            description="Providing World Class NB Project Management, Retrofits and Dry Dock solutions"
             bgImage="/assets/home-hero.jpg"
             :buttons="[{ label: 'Explore Our Services', to: '/services', class: 'btn-gold' }]"
         />
 
         <MediaTextSection title="Our Story" image="/assets/about-us-our-story.png" imageAlt="Shipbuilding Supervision">
-            <p class="text-muted">Founded with a strong commitment to maritime excellence, quality assurance, and professional project oversight.</p>
-            <p class="text-muted">We specialize in ship building supervision, technical consultancy, project management, and real-time progress monitoring for newbuilding projects.</p>
-            <p class="text-muted">Our approach is centered on ensuring every project is delivered with precision, compliance, efficiency, and confidence at every stage of construction.</p>
+            <p class="text-muted">We are specialized in Plan Approval, NB Site Supervision, assisting clients with Technical Specification, SBC, Maker selection, Retrofitting and dry docking for all type and size of vessels across the world</p>
         </MediaTextSection>
+
         <hr />
+
         <FeatureSection title="Why Choose Us" :items="features" />
+
         <hr />
+
         <SmallFeatureSection title="Our Process" description="A structured and transparent approach to shipbuilding supervision, consultancy, and project monitoring." :items="processSteps" />
 
         <CtaSection
